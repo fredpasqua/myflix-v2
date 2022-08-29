@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/myflix-v2/static/css/main.e9c65482.css",
-    "main.js": "/myflix-v2/static/js/main.521e4741.js",
+    "main.js": "/myflix-v2/static/js/main.b255b6bf.js",
     "static/media/masks.png": "/myflix-v2/static/media/masks.23d37018c9b89c3a3f53.png",
     "index.html": "/myflix-v2/index.html",
     "main.e9c65482.css.map": "/myflix-v2/static/css/main.e9c65482.css.map",
-    "main.521e4741.js.map": "/myflix-v2/static/js/main.521e4741.js.map"
+    "main.b255b6bf.js.map": "/myflix-v2/static/js/main.b255b6bf.js.map"
   },
   "entrypoints": [
     "static/css/main.e9c65482.css",
-    "static/js/main.521e4741.js"
+    "static/js/main.b255b6bf.js"
   ]
 }
