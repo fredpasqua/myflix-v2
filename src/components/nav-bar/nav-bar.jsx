@@ -33,7 +33,7 @@ export function NavBar({user}) {
               <Link className="user" to={`/users/${user?.Username}`}>{user?.Username}</Link>
             )}
             {isAuth() && (
-              <Button variant="link" onClick={() => { onLoggedOut() }}>Logout</Button>
+              <Button variant="link" onClick={() => { onLoggedOut() }}><Link to="/">Logout</Link></Button>
             )}
             {!isAuth() && (<Link to="/">Sign In</Link>)}
             {!isAuth() && (<Link to="/register">Register</Link>)}
