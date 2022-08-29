@@ -48,7 +48,7 @@ const handleSubmit = (e) => {
   })
   .then(response => {
     const data = response.data;
-    console.log(data);
+    // console.log(data);
     props.onLoggedIn(data);
     
   })

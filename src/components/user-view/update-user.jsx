@@ -69,9 +69,8 @@ export function UserUpdate({user}) {
           
         });
           alert('User info successfully updated, please log back in');
-          localStorage.removeItem('user');
-          localStorage.removeItem('token');
-          window.open('/', '_self'); 
+          localStorage.setItem('user', response.data.Username);
+          window.open('/myflix-v2', '_self'); 
         })
         .catch(response => {
           alert('unable to UPDATE');
@@ -92,7 +91,7 @@ export function UserUpdate({user}) {
         alert("Your account has been removed, please register to use FredsFlix again");
         localStorage.removeItem('user');
         localStorage.removeItem('token');
-      window.open('/', '_self');
+      window.open('/myflix-v2', '_self');
     })
       .catch(response => {
         alert('unable to remove user');
