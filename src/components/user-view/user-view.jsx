@@ -64,7 +64,7 @@ getUser = (token) => {
     e.preventDefault();
     const Username = localStorage.getItem('user');
     const token = localStorage.getItem('token');
-    axios.delete(`https:/fredsflix.herokuapp.com/users/${Username}/movies/${id}`,
+    axios.delete(`https://fredsflix.herokuapp.com/users/${Username}/movies/${id}`,
         {
             headers: { Authorization: `Bearer ${token}` }
         }
