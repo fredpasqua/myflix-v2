@@ -108,7 +108,7 @@ export function UserUpdate({user}) {
      
       <Col md={12}>
       <CardGroup>
-        <Card Card border="light" style={{ width: '18rem' }}> 
+        <Card border="light" style={{ width: '18rem' }}> 
       <Card.Body className="register_container">
         <Form>
           <h3>Update User Information</h3>

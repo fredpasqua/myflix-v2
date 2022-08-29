@@ -4,15 +4,8 @@ import { connect } from 'react-redux';
 import VisibilityFilterInput from '../visibility-filter-input/visibility-filter-input';
 import { MovieCard } from '../movie-card/movie-card';
 
-const mapStateToProps = state => {
-  const { visibilityFilter, userData } = state;
-  
-  return { visibilityFilter, userData };
-
-};
-
-function MoviesList(props) {
-  const { movies, visibilityFilter} = props;
+function MoviesList({ movies, visibilityFilter, user, setMovies }) {
+ 
   let filteredMovies = movies;
 
   if (visibilityFilter !== '') {
@@ -27,11 +20,19 @@ function MoviesList(props) {
   </Col>
   {filteredMovies.map(m => (
     <Col md={4} key={m._id}>
-      <MovieCard setMovies={this.props?.setMovies} movie={m} favorites={props.user.FavoriteMovies}  /> 
+      <MovieCard setMovies={setMovies} movie={m} favorites={user.FavoriteMovies}  /> 
      
     </Col>
   ))}
 </>;
 }
+
+
+const mapStateToProps = state => {
+  const { visibilityFilter, userData } = state;
+  
+  return { visibilityFilter, userData };
+
+};
 
 export default connect(mapStateToProps)(MoviesList);
