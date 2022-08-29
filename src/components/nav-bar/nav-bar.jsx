@@ -7,7 +7,7 @@ export function NavBar({user}) {
 
   function onLoggedOut() {
     localStorage.clear();
-    window.open("/", "_self");
+    window.open("/myflix-v2", "_self");
   }
 
   const isAuth = () => {
