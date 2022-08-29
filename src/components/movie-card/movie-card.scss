@@ -1,11 +1,22 @@
 .card {
   max-width: 98%;
-  margin: 20px;
+  margin: 10px;
   
 }
 
-a.heart {
-  text-decoration: none;
-  font-size: xx-large;
+.heart {
+  background-color: white;
+  border: none;
+  color: red;
+  font-size: 40px;
+  box-shadow: none;
+  border-radius: 20px;
+
+
 }
+
+.heart:hover {
+  background-color: white;
+}
+
 
