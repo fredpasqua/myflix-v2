@@ -48,7 +48,7 @@ export class MovieCard extends React.Component {
  
     if (this.state.favs.includes(movie._id)) {
      
-      return ( <a className="heart" value={movie._id} onClick={(e) => this.onRemoveFavorite(e, movie._id)}>&hearts;</a>);
+      return ( <Link className="heart" value={movie._id} onClick={(e) => this.onRemoveFavorite(e, movie._id)}>&hearts;</Link>);
       
     }
       else {
