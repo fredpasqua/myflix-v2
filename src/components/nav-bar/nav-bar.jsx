@@ -35,8 +35,8 @@ export function NavBar({user}) {
             {isAuth() && (
               <Button variant="link" onClick={() => { onLoggedOut() }}>Logout</Button>
             )}
-            {!isAuth() && (<Link to="/">Sign In</Link>)}
-            {!isAuth() && (<Link to="/register">Register</Link>)}
+            {!isAuth() && (<Link className="user" to="/">Sign In</Link>)}
+            {!isAuth() && (<Link className="user" to="/register">Register</Link>)}
           </Nav>
         </Navbar.Collapse>
       </Container>
