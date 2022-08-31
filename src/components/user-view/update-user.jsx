@@ -9,7 +9,7 @@ export function UserUpdate({user}) {
     const [ username, setUsername ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ birthday, setBirthday ] = useState('');
-    const [ password, setPassword ] = useState('');
+   
     //Declare hook for each input
     const [ usernameErr, setUsernameErr ] = useState('');
     const [ emailErr, setEmailErr ] = useState('');
@@ -68,7 +68,7 @@ export function UserUpdate({user}) {
             Birthday: response.data.Birthday,
           
         });
-          alert('User info successfully updated, please log back in');
+          alert('User info successfully updated');
           localStorage.setItem('user', response.data.Username);
           window.open('/myflix-v2', '_self'); 
         })
@@ -142,10 +142,3 @@ export function UserUpdate({user}) {
   );
 };
 
-// RegistrationView.propTypes = {
-//   register: PropTypes.shape({
-//     Username: PropTypes.string.isRequired, 
-//     Password: PropTypes.string.isRequired,
-//     Email: PropTypes.string.isRequired
-//   }),
-// };
