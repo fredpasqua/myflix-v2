@@ -58,7 +58,7 @@ export function RegistrationView(props) {
         const data = response.data;
         console.log(data);
         alert('Registration successful, please login!');
-        window.open('/', '_self'); 
+        window.open('/myflix-v2', '_self'); 
       })
       .catch(response => {
         console.error(response);
