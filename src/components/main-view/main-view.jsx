@@ -22,9 +22,7 @@ import MoviesList from '../movies-list/movies-list';
       headers: { Authorization: `Bearer ${token}`}
     })
     .then(response => { 
-   
      this.props.setMovies(response.data);
-     this.componentDidMount();
     })
     .catch(function (error) {
       console.log(error);
