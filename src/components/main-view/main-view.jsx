@@ -47,7 +47,7 @@ import MoviesList from '../movies-list/movies-list';
 
   onLoggedIn(authData) {
     this.props.setUser(
-      authData.user.Username
+      authData.user
       );
     localStorage.setItem('token', authData.token);
     localStorage.setItem('user', authData.user.Username); 
@@ -57,11 +57,12 @@ import MoviesList from '../movies-list/movies-list';
   componentDidMount() {
     let accessToken = localStorage.getItem('token');
     if (accessToken !== null) {
-    
-      this.getMovies(accessToken);
       this.getUser(accessToken);
+      this.getMovies(accessToken);
     }
   }
+
+  
   
      
   render() {

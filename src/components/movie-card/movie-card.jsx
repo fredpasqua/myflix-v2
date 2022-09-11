@@ -8,7 +8,24 @@ import { Link } from "react-router-dom";
 
 
 export class MovieCard extends React.Component {
-  state = { favs: this.props.favorites || [] }
+  state = { favs: [] }
+
+  getUserFavs() {
+  const username = localStorage.getItem("user");
+  const token = localStorage.getItem('token');
+  axios
+    .get(`https://fredsflix.herokuapp.com/users/${username}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+    .then((response) => {
+      this.setState({
+        favs: response.data.FavoriteMovies 
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
   
   onRemoveFavorite = (e, id) => {
     const Username = localStorage.getItem('user');
@@ -19,8 +36,10 @@ export class MovieCard extends React.Component {
         }
     )
         .then(response => {
+          console.log(id);
           const favs = this.state.favs.filter((m) => m !== id)
           this.setState({ favs });
+          console.log(this.state.favs);
         })
         .catch(function (error) {
             console.log(error);
@@ -59,8 +78,7 @@ export class MovieCard extends React.Component {
  };
 
  componentDidMount() {
-
-
+  this.getUserFavs();
  }
 
 
