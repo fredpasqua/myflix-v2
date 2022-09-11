@@ -92,14 +92,14 @@ export class MovieCard extends React.Component {
         <Card.Img variant="top" src={movie.ImagePath}  />
         <Card.Body>
           <Card.Title className='card_title'>{movie.Title}</Card.Title>
-          <Card.Text>{movie.Description}</Card.Text>
+          <Card.Text className='movie_description'>{movie.Description}</Card.Text>
                  
-      
-          <Link to={`/movies/${movie._id}`}>
-            <Button variant="link">OPEN</Button>
-          </Link>
-         
+        <div className="footer">
           <Card.Text> {this.isFav(favorites, movie)} </Card.Text> 
+          <Link to={`/movies/${movie._id}`}>
+            <Button variant="link">View Details</Button>
+          </Link>
+        </div>
         </Card.Body>
        
       </Card>
