@@ -62,13 +62,15 @@ const handleSubmit = (e) => {
   return (
 <>
 
-<Container > 
+<Container  className="login_page"> 
   <Row> 
-    <Col lg={8}>
+    <Col lg={12}>
       <CardGroup>
-        <Card Card border="light" style={{ width: '18rem' }}> 
+        <Card Card border="light" style={{ width: '25rem' }}> 
           <Card.Body className="login_container">
+            <Card.Title>MyFlix: Your source for movie info online!</Card.Title>
           <Card.Title>Please Login or <Link to={`/register`}>Register </Link></Card.Title>
+          <Card.Text>[*** skip registration: Username: testtest Password: password]</Card.Text>
             <Form>
               <Form.Group controlId="formUsername">
                 <Form.Label>Username:</Form.Label>
