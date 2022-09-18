@@ -54,7 +54,7 @@ const handleSubmit = (e) => {
   })
   .catch(e => {
     console.log(e);
-    alert('The provided username does not exist.');
+    alert('The provided username does not exist or the password was entered incorrectly.');
   });
  }
 };  
