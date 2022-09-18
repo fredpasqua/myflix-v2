@@ -31,12 +31,20 @@ export function NavBar({user}) {
           <Nav className="ml-auto">
             {isAuth() && (
               <Link className="user" to={`/users/${user?.Username}`}>{user?.Username}</Link>
+             
             )}
+      
             {isAuth() && (
-              <Button variant="link" onClick={() => { onLoggedOut() }}>Logout</Button>
+              <a href="https://fredpasqua.github.io/portfolio-website-new-main/work.html" className="portfolio">Portfolio</a>
+            )}
+                  {isAuth() && (
+              <Button className="logout" variant="link" onClick={() => { onLoggedOut() }}>Logout</Button>
             )}
             {!isAuth() && (<Link className="user" to="/">Sign In</Link>)}
             {!isAuth() && (<Link className="user" to="/register">Register</Link>)}
+            {!isAuth() && (
+              <a href="https://fredpasqua.github.io/portfolio-website-new-main/work.html" className="portfolio">Portfolio</a>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
