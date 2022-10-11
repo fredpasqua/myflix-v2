@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import './movie-view.scss'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
+import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
@@ -22,10 +22,10 @@ export class MovieView extends React.Component {
         <Col><h1 className='page_title'>Movie Info</h1></Col>
  </Row>
         <Row>
-            <Col> 
+            <Col md={6}> 
                  <div className="movie-poster"><img src={movie.ImagePath}  /></div>
              </Col>
-             <Col>
+             <Col Col md={6}>
             <div className="movie-info">
                  <div className="movie-title">
                      <span className="label">Title: </span>
@@ -51,7 +51,7 @@ export class MovieView extends React.Component {
         <div className="movie-description">
             <span className="label">Description: </span>
             <span className="value">{movie.Description}</span>
-        </div><Button className="button" variant="info" onClick={() => { onBackClick(); }}>Back</Button>
+        </div><Button className="button" variant="info" type="submit" onClick={() => { onBackClick(); }}>Back</Button>
         </Row>
 
     </div>
