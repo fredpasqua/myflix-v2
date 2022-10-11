@@ -22,7 +22,7 @@ export function NavBar({user}) {
   };
 
   return (
-    <Navbar className = "main-nav" sticky="top" bg="dark" expand="lg" variant="dark">
+    <Navbar className="main-nav" sticky="top" bg="white" expand="lg" class="shadow-5-strong">
       <Container>
         <Navbar.Brand className="navbar-logo">
         <Link to="/">myFlix</Link></Navbar.Brand>
