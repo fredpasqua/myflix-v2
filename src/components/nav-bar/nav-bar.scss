@@ -1,7 +1,13 @@
 .user {
   margin-top: 6px;
   padding: 10px;
+  margin-left: 5px;
 }
+.usericon {
+    margin-right:5px;
+    margin-bottom: 6px;
+}
+
 .portfolio {
   margin-top: 6px;
   padding: 10px;
@@ -14,4 +20,9 @@
 .main-nav {
   background-color: white;
   opacity: 0.95;
+
+}
+
+.navbar-logo {
+    font-size: xx-large;
 }
