@@ -45,7 +45,8 @@ export function NavBar({ user }) {
 
             {isAuth() && (
               <a
-                href="https://fredpasqua.github.io/portfolio-website-new-main/work.html"
+                href="Here's a link to my portfolio:
+                https://fredpasqua.github.io/my-portfolio/ "
                 className="portfolio"
               >
                 Portfolio
