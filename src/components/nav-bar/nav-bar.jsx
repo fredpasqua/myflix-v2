@@ -74,7 +74,7 @@ export function NavBar({ user }) {
             )}
             {!isAuth() && (
               <a
-                href="https://fredpasqua.github.io/portfolio-website-new-main/work.html"
+                href="https://fredpasqua.github.io/my-portfolio/"
                 className="portfolio"
               >
                 Portfolio
