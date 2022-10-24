@@ -1,7 +1,7 @@
 import React from  'react';
 import './nav-bar.scss'
-import { Navbar, Nav, Container, Button } from 'react-bootstrap'
-import { Link } from "react-router-dom"
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import { FaRegUser } from "react-icons/fa";
 export function NavBar({ user }) {
@@ -23,6 +23,7 @@ export function NavBar({ user }) {
 
   return (
     <Navbar
+      collapseOnSelect
       className="main-nav"
       sticky="top"
       bg="white"
