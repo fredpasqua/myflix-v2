@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import icon from "./masks.png";
+import { Link } from "react-router-dom";
 import { CardGroup, Card } from "react-bootstrap";
 
 export class GenreView extends React.Component {
@@ -12,6 +13,7 @@ export class GenreView extends React.Component {
 
     return (
       <>
+        <h2 className="title">{genre.Name}</h2>
         <Row className="justify-content-center">
           <Col>
             {" "}
@@ -21,25 +23,28 @@ export class GenreView extends React.Component {
           </Col>
           <Col>
             {" "}
-            <h2>{genre.Name}</h2>
             <p>{genre.Description}</p>
           </Col>
         </Row>
 
         <Row>
           <Col>
-            <p className="page_title2">{genre.Name} Movies</p>
+            <p className="page_title2">Films in this genre...</p>
           </Col>
         </Row>
         <Row>
           <Col md={12}>
             <CardGroup className="genreMovies">
               {movies.map((movie) => (
-                <Card.Img
-                  className="fav-poster"
-                  variant="top"
-                  src={movie.ImagePath}
-                />
+                <Link to={`/movies/${movie._id}`}>
+                  <Button variant="link">
+                    <Card.Img
+                      className="fav-poster"
+                      variant="top"
+                      src={movie.ImagePath}
+                    ></Card.Img>
+                  </Button>
+                </Link>
               ))}
             </CardGroup>
           </Col>

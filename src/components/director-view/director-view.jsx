@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { CardGroup, Card } from "react-bootstrap";
 import { GiDirectorChair } from "react-icons/gi";
+import { Link } from "react-router-dom";
 export class DirectorView extends React.Component {
   render() {
     const { director, onBackClick, movies } = this.props;
@@ -37,13 +38,17 @@ export class DirectorView extends React.Component {
           </Row>
           <Row>
             <Col md={12}>
-              <CardGroup className="dirMovies">
+              <CardGroup className="favPoster">
                 {movies.map((movie) => (
-                  <Card.Img
-                    className="fav-poster"
-                    variant="top"
-                    src={movie.ImagePath}
-                  />
+                  <Link to={`/movies/${movie._id}`}>
+                    <Button variant="link">
+                      <Card.Img
+                        className="fav-poster"
+                        variant="top"
+                        src={movie.ImagePath}
+                      ></Card.Img>
+                    </Button>
+                  </Link>
                 ))}
               </CardGroup>
             </Col>
