@@ -1,12 +1,8 @@
-import { React } from "react";
+import React from "react";
 import "./nav-bar.scss";
-import { FaRegUser } from "react-icons/fa";
-import { TbMovie } from "react-icons/tb";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Button from "react-bootstrap/Button";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FaRegUser } from "react-icons/fa";
 
 export function NavBar({ user }) {
   function onLoggedOut() {
@@ -27,39 +23,31 @@ export function NavBar({ user }) {
 
   return (
     <Navbar
-      bg="white"
-      expand="lg"
+      collapseOnSelect
       className="main-nav"
       sticky="top"
-      collapseOnSelect
+      bg="white"
+      expand="lg"
+      class="shadow-5-strong"
     >
       <Container>
         <Navbar.Brand className="navbar-logo">
-          <Nav.Link as={Link} to="/" href="/">
-            myFlix
-          </Nav.Link>
+          <Link to="/">myFlix</Link>
         </Navbar.Brand>
-
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <TbMovie className="hamburger" />
-        </Navbar.Toggle>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             {isAuth() && (
-              <Nav.Link
-                as={Link}
-                className="user"
-                to={`/users/${user?.Username}`}
-                href={`/users/${user?.Username}`}
-              >
+              <Link className="user" to={`/users/${user?.Username}`}>
                 <FaRegUser className="usericon" />
                 {user?.Username}
-              </Nav.Link>
+              </Link>
             )}
+
             {isAuth() && (
               <a
+                href="https://fredpasqua.github.io/my-portfolio/ "
                 className="portfolio"
-                href="https://fredpasqua.github.io/my-portfolio/"
               >
                 Portfolio
               </a>
@@ -84,6 +72,14 @@ export function NavBar({ user }) {
               <Link className="user" to="/register">
                 Register
               </Link>
+            )}
+            {!isAuth() && (
+              <a
+                href="https://fredpasqua.github.io/my-portfolio/"
+                className="portfolio"
+              >
+                Portfolio
+              </a>
             )}
           </Nav>
         </Navbar.Collapse>
