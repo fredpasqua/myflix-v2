@@ -56,14 +56,14 @@ export function NavBar({ user }) {
                 {user?.Username}
               </Nav.Link>
             )}
-            {isAuth() && (
-              <a
-                className="portfolio"
-                href="https://fredpasqua.github.io/my-portfolio/"
-              >
-                Portfolio
-              </a>
-            )}
+
+            <a
+              className="portfolio"
+              href="https://fredpasqua.github.io/my-portfolio/"
+            >
+              Portfolio
+            </a>
+
             {isAuth() && (
               <Button
                 className="logout"
