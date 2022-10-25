@@ -57,12 +57,14 @@ export function NavBar({ user }) {
               </Nav.Link>
             )}
 
-            <a
-              className="portfolio"
-              href="https://fredpasqua.github.io/my-portfolio/"
-            >
-              Portfolio
-            </a>
+            {isAuth() && (
+              <a
+                href="https://fredpasqua.github.io/my-portfolio/ "
+                className="portfolio"
+              >
+                Portfolio
+              </a>
+            )}
 
             {isAuth() && (
               <Button
@@ -84,6 +86,14 @@ export function NavBar({ user }) {
               <Link className="user" to="/register">
                 Register
               </Link>
+            )}
+            {!isAuth() && (
+              <a
+                href="https://fredpasqua.github.io/my-portfolio/"
+                className="portfolio"
+              >
+                Portfolio
+              </a>
             )}
           </Nav>
         </Navbar.Collapse>
