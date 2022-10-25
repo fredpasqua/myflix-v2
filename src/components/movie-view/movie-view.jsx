@@ -23,6 +23,7 @@ export class MovieView extends React.Component {
             <h1 className="page_title">
               <FcFilmReel />
               {movie.Title}
+              <FcFilmReel />
             </h1>
           </Col>
         </Row>
@@ -34,10 +35,6 @@ export class MovieView extends React.Component {
           </Col>
           <Col Col md={6}>
             <div className="movie-info">
-              <div className="movie-title">
-                <span className="label">Title: </span>
-                <span className="value">{movie.Title}</span>
-              </div>
               <div className="movie-director">
                 <span className="label">Director: </span>
                 <span className="value">

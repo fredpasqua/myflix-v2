@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { CardGroup, Card } from "react-bootstrap";
-
+import { GiDirectorChair } from "react-icons/gi";
 export class DirectorView extends React.Component {
   render() {
     const { director, onBackClick, movies } = this.props;
@@ -15,21 +15,24 @@ export class DirectorView extends React.Component {
         <>
           <Row>
             <Col>
-              <h1 className="page_title">Director Info</h1>
+              <h1 className="page_title">
+                <GiDirectorChair />
+                {director.Name}
+                <GiDirectorChair />
+              </h1>
             </Col>
           </Row>
 
           <Row>
             <Col>
               {" "}
-              <h2>{director.Name}</h2>
-              <p>Born in {director.Birth}</p>
+              <p className="birth">Born in {director.Birth}</p>
               <p className="title">{director.Bio}</p>
             </Col>
           </Row>
           <Row>
             <Col>
-              <h2 className="page_title2">Movies by {director.Name}</h2>
+              <h4 className="directedBy">Films Directed By: {director.Name}</h4>
             </Col>
           </Row>
           <Row>

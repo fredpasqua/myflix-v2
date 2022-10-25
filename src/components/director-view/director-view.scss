@@ -8,6 +8,16 @@
   font-size: larger;
   color: 000000;
 }
+.directedBy {
+  font-size: large;
+  text-align: center;
+  
+}
+
+.birth {
+  text-align: center;
+}
+
 p.title {
   font-size: medium;
 }
@@ -16,12 +26,15 @@ p.title {
   background-color: white;
 }
 .favorite-movie {
-  max-width: 200px;
+  max-width:300px;
 }
 .fav-poster {
+  display: flex;
+  justify-content: center;
   padding: 20px;
-  max-width: 200px;
+  max-width: 175px;
   box-shadow: rgba(10, 9, 9, 0.24) 0px 5px 10px;
+
 }
 .movie_title {
   max-width: 200px;
